@@ -5,6 +5,10 @@ from sumy.summarizers.lsa import LsaSummarizer
 from PyPDF2 import PdfReader
 from reportlab.pdfgen import canvas
 import io
+import nltk
+
+# Download tokenizer data (needed on Render)
+nltk.download("punkt", quiet=True)
 
 app = Flask(__name__)
 
